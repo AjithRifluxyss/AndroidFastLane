@@ -22,8 +22,9 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+
     - name: Build with Gradle
       run: ./gradlew build
-    - name: Build apk release project (APK) - ${{ env.main_project_module }} module
-      run: ./gradlew assemble
+    - name: Build app bundle release (APK) - ${{ env.main_project_module }} module
+      run: ./gradlew ${{ env.main_project_module }}:bundleRelease
     
