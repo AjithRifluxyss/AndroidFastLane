@@ -25,6 +25,6 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
-    - name: Build app bundle release (APK) - ${{ env.main_project_module }} module
-      run: ./gradlew ${{ env.main_project_module }}:bundleRelease
+    - name: Build apk release project (APK) - ${{ env.main_project_module }} module
+      run: ./gradlew assemble
     
